@@ -30,7 +30,7 @@ Route::middleware([\App\Http\Middleware\login::class])->group(function () {
     Route::post("/feedback", [\App\Http\Controllers\HomeController::class,'feedback']);
     Route::get("/menu", [\App\Http\Controllers\HomeController::class,'menu']);
     Route::get("/menulist", [\App\Http\Controllers\HomeController::class,'menulist']);
-});
+
 
     Route::get("/Admin", [\App\Http\Controllers\adminController::class,'Admin_dashboard']);
     Route::get("/employee", [\App\Http\Controllers\adminController::class,'employee']);
@@ -51,5 +51,5 @@ Route::middleware([\App\Http\Middleware\login::class])->group(function () {
 
     Route::get("/dbcheck", [\App\Http\Controllers\adminController::class,'dbcheck']);
     Route::get("/logout", [\App\Http\Controllers\HomeController::class,'logout']);
-
+});
 
